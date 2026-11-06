@@ -1,7 +1,7 @@
-
 package com.estiradojordi.fitnessapp.tools
 
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertThrows
 import org.junit.Test
 
 class CalculateIMCTest {
@@ -21,9 +21,9 @@ class CalculateIMCTest {
     }
 
     @Test
-    fun calculateIMC_ZeroWeight_ReturnsZero() {
-        val resultado = calculateIMC(0.0, 175)
-
-        assertEquals(0.0, resultado, 0.01)
+    fun calculateIMC_ZeroWeight_ThrowsException() {
+        assertThrows(IllegalArgumentException::class.java) {
+            calculateIMC(0.0, 175)
+        }
     }
 }
