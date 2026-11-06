@@ -148,7 +148,7 @@ fun EditProfileScreen(
 
             OutlinedTextField(
                 label = { Text("Pes objetciu") },
-                value = pesObjectiu.toString(),
+                value = pesObjectiuNou.toString(),
                 onValueChange = { pesObjectiuNou = it.toDoubleOrNull() ?: pesObjectiuNou },
                 modifier = Modifier
                     .padding(8.dp)
