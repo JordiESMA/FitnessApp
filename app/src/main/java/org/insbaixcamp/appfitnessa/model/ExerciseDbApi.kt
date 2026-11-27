@@ -8,6 +8,7 @@ interface ExerciseDbApi {
 
     @GET("api/v1/exercises")
     fun getExercises(
+        @Query ("limit") limit: Int = 25,
         @Query("after") after: String? = null
     ): Call<ExerciseResponse>
 
